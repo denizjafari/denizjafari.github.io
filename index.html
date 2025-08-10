@@ -14,16 +14,92 @@
   />
   <style>
     /* Base styling */
-    body { margin:0; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', sans-serif; 
+      color: #333; 
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
     a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    header { background: #f8f9fa; padding: 2rem 1rem; text-align: center; border-bottom: 1px solid #e0e0e0; }
+    
+    header { 
+      background: #f8f9fa; 
+      padding: 2rem 1rem; 
+      text-align: center; 
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+    
     header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
     header p { margin: 0.5rem 0; font-weight: 300; }
     nav { margin-top: 1rem; }
     nav a { margin: 0 0.75rem; font-weight: 500; }
 
-    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .content-wrapper {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 250px;
+      background: #f8f9fa;
+      border-right: 1px solid #e0e0e0;
+      padding: 2rem 1rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+    }
+
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-nav li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #555;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-nav a:hover {
+      background: #e9ecef;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .sidebar-nav a.active {
+      background: #0066cc;
+      color: white;
+    }
+
+    main { 
+      flex: 1;
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 2rem 1rem; 
+    }
+    
     section { margin-bottom: 3rem; }
     section h2 { border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-bottom: 1rem; font-weight: 500; }
     ul { list-style: none; padding-left: 0; }
@@ -33,7 +109,31 @@
     .btn { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; border: 1px solid #0066cc; border-radius: 4px; font-weight: 500; }
     .btn:hover { background: #0066cc; color: #fff; }
 
-    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; border-top: 1px solid #e0e0e0; }
+    footer { 
+      text-align: center; 
+      padding: 1rem; 
+      font-size: 0.9rem; 
+      color: #777; 
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -52,54 +152,145 @@
       <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am a PhD candidate in Biomedical Engineering at the University of Toronto under the supervision of Dr. Alex Mihailidis. My work focuses on the design and development of a modular upper limb rehabilitation robot for post-stroke therapy. I hold an MSc in Rehabilitation Sciences and an MHSc in Clinical Engineering, both from UofT.</p>
-    </section>
+  <div class="content-wrapper">
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#research-interests">Research Interests</a></li>
+          <li><a href="#book-recommendations">Book Recommendations</a></li>
+          <li><a href="#triathlon-experience">Triathlon Experience</a></li>
+          <li><a href="#travels">Travels</a></li>
+          <li><a href="#ask-me">Ask Me</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <section id="research">
-      <h2>Research & Experience</h2>
-      <ul>
-        <li><strong>PhD Researcher</strong> (Sept 2022 – Present): Developing a modular upper limb rehabilitation robot for customized stroke therapy.</li>
-        <li><strong>MSc Researcher</strong> (Sept 2019 – Aug 2022): AI-based assessment of facial motor deficits in neurodegenerative diseases.</li>
-        <li><strong>MHSc Researcher</strong> (Sept 2016 – Aug 2019): Navigation workflow for radiofrequency ablation of spinal metastases.</li>
-      </ul>
-    </section>
+    <main>
+      <section id="home">
+        <h2>Welcome</h2>
+        <p>Welcome to my personal website! I'm a PhD candidate in Biomedical Engineering at the University of Toronto, passionate about developing innovative rehabilitation technologies and advancing healthcare solutions.</p>
+      </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>PhD, Biomedical Engineering</strong>, University of Toronto (2022–Present)</li>
-        <li><strong>MSc, Rehabilitation Sciences</strong>, University of Toronto (2019–2022)</li>
-        <li><strong>MHSc, Clinical Engineering</strong>, University of Toronto (2016–2019)</li>
-        <li><strong>BASc, Engineering Science (Aerospace)</strong>, University of Toronto (2011–2016)</li>
-      </ul>
-    </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a PhD candidate in Biomedical Engineering at the University of Toronto under the supervision of Dr. Alex Mihailidis. My work focuses on the design and development of a modular upper limb rehabilitation robot for post-stroke therapy. I hold an MSc in Rehabilitation Sciences, an MHSc in Clinical Engineering, and a BASc in Engineering Science (Aerospace) all from UofT.</p>
+      </section>
 
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li>Jafari, D., et al. <em>3D Video Tracking Technology in the Assessment of Oro-facial Impairments in Neurological Disease</em>. JSLHR, 2023.</li>
-        <li>Simmatis, L., Alavi Naeini, S., Jafari, D., et al. <em>Analytical Validation of a Webcam-Based Assessment of Speech Kinematics</em>. Digital Biomarkers, 2023.</li>
-        <li>Naeini, S., Simmatis, L., Jafari, D., et al. <em>Automated Temporal Segmentation of Orofacial Assessment Videos</em>. IEEE BHI, 2022.</li>
-      </ul>
-      <p><a href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&hl=en" target="_blank">View all publications on Google Scholar</a></p>
-    </section>
+     
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:deniz[dot]jafari[at]utoronto[dot]ca">deniz[dot]jafari[at]utoronto[dot]ca</a></p>
-      <p><strong>Location:</strong> Toronto, Canada</p>
-    </section>
-  </main>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>PhD, Biomedical Engineering</strong>, University of Toronto (2022–Present)</li>
+          <li><strong>MSc, Rehabilitation Sciences</strong>, University of Toronto (2019–2022)</li>
+          <li><strong>MHSc, Clinical Engineering</strong>, University of Toronto (2016–2019)</li>
+          <li><strong>BASc, Engineering Science (Aerospace)</strong>, University of Toronto (2011–2016)</li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul>
+          <li>Jafari, D., et al. <em>3D Video Tracking Technology in the Assessment of Oro-facial Impairments in Neurological Disease</em>. JSLHR, 2023.</li>
+          <li>Simmatis, L., Alavi Naeini, S., Jafari, D., et al. <em>Analytical Validation of a Webcam-Based Assessment of Speech Kinematics</em>. Digital Biomarkers, 2023.</li>
+          <li>Naeini, S., Simmatis, L., Jafari, D., et al. <em>Automated Temporal Segmentation of Orofacial Assessment Videos</em>. IEEE BHI, 2022.</li>
+        </ul>
+        <p><a href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&hl=en" target="_blank">View all publications on Google Scholar</a></p>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <p>I have experience teaching and mentoring students in various capacities throughout my academic career. Details about my teaching experience will be added here.</p>
+      </section>
+
+      <section id="research-interests">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Rehabilitation robotics and assistive technology</li>
+          <li>Stroke rehabilitation and motor learning</li>
+          <li>AI and machine learning in healthcare</li>
+          <li>Biomedical signal processing</li>
+          <li>Clinical engineering and medical device development</li>
+        </ul>
+      </section>
+
+      <section id="book-recommendations">
+        <h2>Book Recommendations</h2>
+        <p>Here are some books that have influenced my thinking and research:</p>
+        <ul>
+          <li><em>Designing for People</em> by Henry Dreyfuss</li>
+          <li><em>The Design of Everyday Things</em> by Don Norman</li>
+          <li><em>Biomechanics and Motor Control of Human Movement</em> by David Winter</li>
+        </ul>
+      </section>
+
+      <section id="triathlon-experience">
+        <h2>Triathlon Experience</h2>
+        <p>I'm passionate about endurance sports and have completed several triathlons. This section will showcase my athletic achievements and the lessons learned from training and competing.</p>
+      </section>
+
+      <section id="travels">
+        <h2>Travels</h2>
+        <p>I love exploring new places and experiencing different cultures. This section will feature highlights from my travels and the insights gained from meeting people around the world.</p>
+      </section>
+
+      <section id="ask-me">
+        <h2>Ask Me</h2>
+        <p>Have questions about my research, academic journey, or anything else? Feel free to reach out! I'm always happy to connect with fellow researchers, students, and anyone interested in biomedical engineering and rehabilitation technology.</p>
+        <p><strong>Email:</strong> <a href="mailto:deniz[dot]jafari[at]utoronto[dot]ca">deniz [dot] jafari [at] utoronto [dot] ca</a></p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:deniz[dot]jafari[at]utoronto[dot]ca">deniz [dot] jafari [at] utoronto [dot] ca</a></p>
+        <p><strong>Location:</strong> Toronto, Canada</p>
+      </section>
+    </main>
+  </div>
 
   <footer>
     &copy; 2025 Deniz Jafari
   </footer>
+
+  <script>
+    // Add active class to current section in sidebar
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+      const sections = document.querySelectorAll('section');
+      
+      function updateActiveLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        sidebarLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', updateActiveLink);
+      updateActiveLink();
+    });
+  </script>
 </body>
 </html>
