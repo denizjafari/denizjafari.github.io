@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Deniz Jafari</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Free via CDNJS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <style>
+    /* Base styling */
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', sans-serif; 
+      color: #333; 
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    header { 
+      background: #f8f9fa; 
+      padding: 2rem 1rem; 
+      text-align: center; 
+      border-bottom: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+    
+    header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
+    header p { margin: 0.5rem 0; font-weight: 300; }
+    nav { margin-top: 1rem; }
+    nav a { margin: 0 0.75rem; font-weight: 500; }
+
+    .content-wrapper {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      width: 250px;
+      background: #f8f9fa;
+      border-right: 1px solid #e0e0e0;
+      padding: 2rem 1rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.5rem;
+    }
+
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-nav li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #555;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .sidebar-nav a:hover {
+      background: #e9ecef;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .sidebar-nav a.active {
+      background: #0066cc;
+      color: white;
+    }
+
+    main { 
+      flex: 1;
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 2rem 1rem; 
+    }
+    
+    section { margin-bottom: 3rem; }
+    section h2 { border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-bottom: 1rem; font-weight: 500; }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.5rem; }
+
+    .social-icons a { margin: 0 0.5rem; font-size: 1.5rem; vertical-align: middle; }
+    .btn { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; border: 1px solid #0066cc; border-radius: 4px; font-weight: 500; }
+    .btn:hover { background: #0066cc; color: #fff; }
+
+    footer { 
+      text-align: center; 
+      padding: 1rem; 
+      font-size: 0.9rem; 
+      color: #777; 
+      border-top: 1px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    /* Contact form styling */
+    .contact-form-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .contact-form-container iframe {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .consulting-info {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border-left: 4px solid #0066cc;
+    }
+
+    .consulting-info h3 {
+      color: #0066cc;
+      margin-top: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+
+      .contact-form-container iframe {
+        width: 100%;
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Deniz Jafari</h1>
+    <p>PhD Candidate, Biomedical Engineering Institute, University of Toronto</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/denizjafari/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/denizjafari" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://iatsl.org/people/djafari.html" target="_blank"><i class="fas fa-university"></i></a>
+      <a href="DenizJafari_CV_2025.pdf" target="_blank" class="btn">Download CV</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="index.html#publications">Publications</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="index.html#teaching">Teaching</a></li>
+          <li><a href="index.html#research-interests">Research Interests</a></li>
+          <li><a href="index.html#book-recommendations">Book Recommendations</a></li>
+          <li><a href="index.html#triathlon-experience">Triathlon Experience</a></li>
+          <li><a href="index.html#travels">Travels</a></li>
+          <li><a href="index.html#ask-me">Ask Me</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:deniz[dot]jafari[at]utoronto[dot]ca">deniz [dot] jafari [at] utoronto [dot] ca</a></p>
+        <p><strong>Location:</strong> Toronto, Canada</p>
+      </section>
+
+      <section id="consulting">
+        <h2>Consulting Services</h2>
+        <div class="consulting-info">
+          <h3>Technology Entrepreneurship & Business Development</h3>
+          <p>I have experience and passion in technology entrepreneurship, with a proven record in securing over $150,000 in government grants and loans for businesses. My background includes developing business models, providing feedback on scientific proposals and post-graduate NSERC applications, and serving for several years as a teaching assistant for the University of Toronto's undergraduate entrepreneurship certificate courses.</p>
+          
+          <p>I offer consulting services in business plan development, grant and funding applications, and digital technology implementation for startups and small- to medium-sized businesses. If interested, feel free to reach out.</p>
+        </div>
+      </section>
+
+      <section id="contact-form">
+        <h2>Get In Touch</h2>
+        <p>Please use the form below to send me a message. I'll get back to you as soon as possible.</p>
+        
+        <div class="contact-form-container">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJZKqm2_JnOeu7MZ-oijzg4c2eGI7ipGgUI7dhpSTNKkv4PQ/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Deniz Jafari
+  </footer>
+</body>
+</html> 
