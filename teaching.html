@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Deniz Jafari</title>
+  <title>Teaching - Deniz Jafari</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome Free via CDNJS -->
@@ -118,19 +118,8 @@
       flex-shrink: 0;
     }
 
-    /* Contact form styling */
-    .contact-form-container {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .contact-form-container iframe {
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .consulting-info {
+    /* Teaching page specific styling */
+    .teaching-intro {
       background: #f8f9fa;
       padding: 2rem;
       border-radius: 8px;
@@ -138,9 +127,45 @@
       border-left: 4px solid #0066cc;
     }
 
-    .consulting-info h3 {
+    .teaching-intro h3 {
       color: #0066cc;
       margin-top: 0;
+    }
+
+    .course-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .course-list li {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .course-list li:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-color: #0066cc;
+    }
+
+    .course-title {
+      font-weight: 600;
+      color: #0066cc;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-period {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-faculty {
+      color: #555;
+      font-style: italic;
     }
 
     /* Responsive design */
@@ -157,11 +182,6 @@
       
       main {
         padding: 1rem;
-      }
-
-      .contact-form-container iframe {
-        width: 100%;
-        height: 600px;
       }
     }
   </style>
@@ -189,8 +209,8 @@
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#education">Education</a></li>
           <li><a href="index.html#publications">Publications</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="index.html#teaching">Teaching</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="teaching.html" class="active">Teaching</a></li>
           <li><a href="index.html#research-interests">Research Interests</a></li>
           <li><a href="index.html#book-recommendations">Book Recommendations</a></li>
           <li><a href="index.html#triathlon-experience">Triathlon Experience</a></li>
@@ -201,29 +221,39 @@
     </aside>
 
     <main>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:deniz[dot]jafari[at]utoronto[dot]ca">deniz [dot] jafari [at] utoronto [dot] ca</a></p>
-        <p><strong>Location:</strong> Toronto, Canada</p>
-      </section>
-
-      <section id="consulting">
-        <h2>Consulting Services</h2>
-        <div class="consulting-info">
-          <h3>Technology Entrepreneurship & Business Development</h3>
-          <p>I have experience and passion in technology entrepreneurship, with a proven record in securing over $150,000 in government grants and loans for businesses. My background includes developing business models, providing feedback on scientific proposals and post-graduate NSERC applications, and serving for several years as a teaching assistant for the University of Toronto's undergraduate entrepreneurship certificate courses.</p>
-          
-          <p>I offer consulting services in business plan development, grant and funding applications, and digital technology implementation for startups and small- to medium-sized businesses. If interested, feel free to reach out.</p>
-        </div>
-      </section>
-
-      <section id="contact-form">
-        <h2>Get In Touch</h2>
-        <p>Please use the form below to send me a message. I'll get back to you as soon as possible.</p>
+      <section id="teaching">
+        <h2>Teaching Experience</h2>
         
-        <div class="contact-form-container">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJZKqm2_JnOeu7MZ-oijzg4c2eGI7ipGgUI7dhpSTNKkv4PQ/viewform?embedded=true" width="640" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="teaching-intro">
+          <h3>Teaching Assistant Experience</h3>
+          <p>I have served as a Teaching Assistant for the following courses at the University of Toronto, gaining valuable experience in supporting student learning and course delivery.</p>
         </div>
+
+        <ul class="course-list">
+          <li>
+            <div class="course-title">Entrepreneurship and Business Management Course</div>
+            <div class="course-period">Jan. – Apr. 2021 – 2024</div>
+            <div class="course-faculty">Faculty of Applied Science and Engineering, University of Toronto</div>
+          </li>
+          
+          <li>
+            <div class="course-title">Robot Control and Modelling</div>
+            <div class="course-period">Jan. – Apr. 2024</div>
+            <div class="course-faculty">Faculty of Applied Science and Engineering, University of Toronto</div>
+          </li>
+          
+          <li>
+            <div class="course-title">Entrepreneurship and Small Business Course</div>
+            <div class="course-period">Sept. – Dec. 2020 – 2022</div>
+            <div class="course-faculty">Faculty of Applied Science and Engineering, University of Toronto</div>
+          </li>
+          
+          <li>
+            <div class="course-title">Praxis III - Engineering Foundation Design Course</div>
+            <div class="course-period">Jan. 2020 – Apr. 2020</div>
+            <div class="course-faculty">Division of Engineering Science, University of Toronto</div>
+          </li>
+        </ul>
       </section>
     </main>
   </div>
