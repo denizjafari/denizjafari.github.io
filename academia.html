@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deniz Jafari</title>
- <!-- Google Fonts -->
+  <title>Academia - Deniz Jafari</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome Free via CDNJS -->
   <link
@@ -118,6 +118,35 @@
       flex-shrink: 0;
     }
 
+    /* Academia page specific styling */
+    .publications-content {
+      padding: 2rem 0;
+    }
+
+    .publications-content h2 {
+      color: #6a0dad;
+      margin-bottom: 1.5rem;
+    }
+
+    .google-scholar-link {
+      display: inline-block;
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+      background: #6a0dad;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .google-scholar-link:hover {
+      background: #5a0b9d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.3);
+      text-decoration: none;
+    }
+
     /* Responsive design */
     @media (max-width: 768px) {
       .content-wrapper {
@@ -147,7 +176,6 @@
       <a href="https://iatsl.org/people/djafari.html" target="_blank"><i class="fas fa-university"></i></a>
       <a href="DenizJafari_CV_2025.pdf" target="_blank" class="btn">Download CV</a>
     </div>
-
   </header>
 
   <div class="content-wrapper">
@@ -155,11 +183,11 @@
       <h3>Navigation</h3>
       <nav class="sidebar-nav">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#research-interests">Research Interests</a></li>
           <li><a href="education.html">Education</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="academia.html">Academia</a></li>
+          <li><a href="academia.html" class="active">Academia</a></li>
           <li><a href="#book-recommendations">Book Recommendations</a></li>
           <li><a href="#triathlon">Triathlon</a></li>
           <li><a href="#my-adventures">My Adventures</a></li>
@@ -169,14 +197,13 @@
     </aside>
 
     <main>
-      <section id="home">
-        <h2>Welcome</h2>
-        <p>Welcome to my personal digital playground! I'm passionate about developing innovative medical technologies and advancing healthcare solutions.</p>
-      </section>
-
-      <section id="about">
-        <h2>About Me</h2>
-        <p>I am a PhD candidate in Biomedical Engineering at the University of Toronto under the supervision of Dr. Alex Mihailidis. My work focuses on the design and development of a modular upper limb rehabilitation system for home basedpost-stroke therapy. I hold an MSc in Rehabilitation Sciences, an MHSc in Clinical Engineering, and a BASc in Engineering Science (Aerospace) all from UofT.</p>
+      <section id="publications">
+        <div class="publications-content">
+          <h2>Publications</h2>
+          <p>My papers can be found here: <a href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&hl=en" target="_blank" class="google-scholar-link">
+            <i class="fas fa-graduation-cap"></i> View on Google Scholar
+          </a></p>
+        </div>
       </section>
     </main>
   </div>
@@ -184,35 +211,5 @@
   <footer>
     &copy; 2025 vibed by Deniz Jafari ;)
   </footer>
-
-  <script>
-    // Add active class to current section in sidebar
-    document.addEventListener('DOMContentLoaded', function() {
-      const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-      const sections = document.querySelectorAll('section');
-      
-      function updateActiveLink() {
-        let current = '';
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        sidebarLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-          }
-        });
-      }
-      
-      window.addEventListener('scroll', updateActiveLink);
-      updateActiveLink();
-    });
-  </script>
 </body>
-</html>
+</html> 
