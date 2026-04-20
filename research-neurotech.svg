@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Human-machine augmentation research visual</title>
+  <desc id="desc">A stylized person, wearable sensors, neural signals, a robotic arm, and outdoor terrain connected in a closed loop.</desc>
+  <defs>
+    <linearGradient id="terrain" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#0f3d35"/>
+      <stop offset="0.55" stop-color="#078c88"/>
+      <stop offset="1" stop-color="#f05d3b"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#18241e" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .line { fill: none; stroke: #078c88; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #18241e; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: .58; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; }
+      .flow { stroke-dasharray: 18 18; animation: dash 8s linear infinite; }
+      @keyframes pulse { 0%, 100% { opacity: .55; transform: scale(.96); } 50% { opacity: 1; transform: scale(1.05); } }
+      @keyframes dash { to { stroke-dashoffset: -288; } }
+      @media (prefers-reduced-motion: reduce) { .pulse, .flow { animation: none; } }
+    </style>
+  </defs>
+
+  <rect width="960" height="720" fill="#fff8ed"/>
+  <path d="M48 604 C164 516 237 564 328 498 C446 413 544 484 638 418 C738 348 820 373 912 304" fill="none" stroke="#dff8ed" stroke-width="72" stroke-linecap="round"/>
+  <path d="M70 610 C178 548 245 573 334 516 C448 444 543 499 638 440 C738 379 814 391 900 335" fill="none" stroke="url(#terrain)" stroke-width="14" stroke-linecap="round"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="584" y="116" width="248" height="248" rx="8" fill="#ffffff" stroke="#d7ded7"/>
+    <path d="M635 276 C684 198 745 317 795 222" class="line flow"/>
+    <path d="M632 170 H790 M632 206 H740 M632 318 H758" class="thin"/>
+    <circle cx="635" cy="276" r="11" fill="#f05d3b" class="pulse"/>
+    <circle cx="707" cy="245" r="10" fill="#b7e041" class="pulse"/>
+    <circle cx="795" cy="222" r="11" fill="#f05d3b" class="pulse"/>
+  </g>
+
+  <g transform="translate(210 112)" filter="url(#softShadow)">
+    <circle cx="132" cy="84" r="58" fill="#f5b84b"/>
+    <path d="M96 79 C112 52 155 51 171 82 C154 73 139 78 124 91 C114 99 104 96 96 79Z" fill="#18241e" opacity=".18"/>
+    <path d="M132 148 V322" class="line"/>
+    <path d="M132 186 C84 214 59 261 43 328" class="line"/>
+    <path d="M132 188 C190 210 219 253 236 318" class="line"/>
+    <path d="M132 322 C99 385 82 437 58 524" class="line"/>
+    <path d="M132 322 C177 382 207 432 246 516" class="line"/>
+    <path d="M101 211 L170 211 M91 278 L182 278 M91 394 L197 394" class="thin"/>
+
+    <circle cx="132" cy="184" r="19" fill="#ffffff" stroke="#f05d3b" stroke-width="8" class="pulse"/>
+    <circle cx="46" cy="328" r="17" fill="#ffffff" stroke="#b7e041" stroke-width="8" class="pulse"/>
+    <circle cx="236" cy="318" r="17" fill="#ffffff" stroke="#b7e041" stroke-width="8" class="pulse"/>
+    <circle cx="58" cy="524" r="17" fill="#ffffff" stroke="#f05d3b" stroke-width="8" class="pulse"/>
+    <circle cx="246" cy="516" r="17" fill="#ffffff" stroke="#f05d3b" stroke-width="8" class="pulse"/>
+  </g>
+
+  <g transform="translate(535 382)" filter="url(#softShadow)">
+    <path d="M86 170 H265" stroke="#18241e" stroke-width="24" stroke-linecap="round"/>
+    <path d="M91 168 C99 112 126 77 179 54" fill="none" stroke="#18241e" stroke-width="26" stroke-linecap="round"/>
+    <path d="M178 54 C224 35 269 58 286 103" fill="none" stroke="#18241e" stroke-width="26" stroke-linecap="round"/>
+    <path d="M282 104 L320 82 M292 120 L339 114 M290 138 L329 154" stroke="#18241e" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="89" cy="169" r="38" fill="#ffffff" stroke="#078c88" stroke-width="12"/>
+    <circle cx="178" cy="54" r="34" fill="#ffffff" stroke="#f05d3b" stroke-width="12"/>
+    <circle cx="283" cy="104" r="28" fill="#ffffff" stroke="#b7e041" stroke-width="12"/>
+  </g>
+
+  <path d="M395 296 C474 255 519 224 584 226" class="line flow"/>
+  <path d="M579 300 C505 353 438 376 357 373" class="line flow"/>
+  <path d="M502 548 C428 589 360 589 294 545" class="line flow"/>
+
+  <g transform="translate(92 92)">
+    <rect x="0" y="0" width="150" height="92" rx="8" fill="#18241e"/>
+    <path d="M22 48 H43 L55 27 L70 68 L83 39 L95 48 H126" fill="none" stroke="#b7e041" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="126" cy="48" r="8" fill="#f05d3b" class="pulse"/>
+  </g>
+</svg>
