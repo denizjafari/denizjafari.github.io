@@ -3,437 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book recommendations from Deniz Jafari, with nonfiction, science, engineering, entrepreneurship, and personal growth favorites.">
   <title>Good Reads - Deniz Jafari</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Free via CDNJS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    crossorigin="anonymous"
-  />
-  <style>
-    /* Base styling */
-    body { 
-      margin: 0; 
-      font-family: 'Roboto', sans-serif; 
-      color: #333; 
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    
-    a { color: #6a0dad; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    header { 
-      background: #f8f9fa; 
-      padding: 2rem 1rem; 
-      text-align: center; 
-      border-bottom: 1px solid #e0e0e0;
-      flex-shrink: 0;
-    }
-    
-    header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; }
-    header p { margin: 0.5rem 0; font-weight: 300; }
-    nav { margin-top: 1rem; }
-    nav a { margin: 0 0.75rem; font-weight: 500; }
-
-    .content-wrapper {
-      display: flex;
-      flex: 1;
-    }
-
-    /* Sidebar styling */
-    .sidebar {
-      width: 250px;
-      background: #f8f9fa;
-      border-right: 1px solid #e0e0e0;
-      padding: 2rem 1rem;
-      flex-shrink: 0;
-    }
-
-    .sidebar h3 {
-      margin: 0 0 1rem 0;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #333;
-      border-bottom: 2px solid #6a0dad;
-      padding-bottom: 0.5rem;
-    }
-
-    .sidebar-nav {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sidebar-nav li {
-      margin-bottom: 0.5rem;
-    }
-
-    .sidebar-nav a {
-      display: block;
-      padding: 0.75rem 1rem;
-      color: #555;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-    }
-
-    .sidebar-nav a:hover {
-      background: #e9ecef;
-      color: #6a0dad;
-      text-decoration: none;
-    }
-
-    .sidebar-nav a.active {
-      background: #6a0dad;
-      color: white;
-    }
-
-    main { 
-      flex: 1;
-      max-width: 1000px; 
-      margin: 0 auto; 
-      padding: 2rem 1rem; 
-    }
-    
-    section { margin-bottom: 3rem; }
-    section h2 { border-bottom: 2px solid #6a0dad; padding-bottom: 0.5rem; margin-bottom: 1rem; font-weight: 400; }
-    ul { list-style: none; padding-left: 0; }
-    ul li { margin-bottom: 0.5rem; }
-
-    .social-icons a { margin: 0 0.5rem; font-size: 1.5rem; vertical-align: middle; }
-    .btn { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; border: 1px solid #6a0dad; border-radius: 4px; font-weight: 500; }
-    .btn:hover { background: #6a0dad; color: #fff; }
-
-    footer { 
-      text-align: center; 
-      padding: 1rem; 
-      font-size: 0.9rem; 
-      color: #777; 
-      border-top: 1px solid #e0e0e0;
-      flex-shrink: 0;
-    }
-
-    /* Good Reads page specific styling */
-    .page-intro {
-      background: #f8f9fa;
-      padding: 2rem;
-      border-radius: 8px;
-      margin: 2rem 0;
-      border-left: 4px solid #6a0dad;
-    }
-
-    .page-intro h3 {
-      color: #6a0dad;
-      margin-top: 0;
-    }
-
-    .category-section {
-      margin-bottom: 3rem;
-    }
-
-    .category-section h2 {
-      color: #6a0dad;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-    }
-
-    .books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    .book-item {
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .book-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .book-image-container {
-      position: relative;
-      margin-bottom: 1rem;
-    }
-
-    .book-image {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .book-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(106, 13, 173, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 8px;
-    }
-
-    .book-item:hover .book-overlay {
-      opacity: 1;
-    }
-
-    .book-item:hover .book-image {
-      transform: scale(1.05);
-    }
-
-    .audible-link {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.5rem 1rem;
-      border: 2px solid white;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-
-    .audible-link:hover {
-      background: white;
-      color: #6a0dad;
-      text-decoration: none;
-    }
-
-    .book-title {
-      font-weight: 500;
-      color: #333;
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      line-height: 1.3;
-    }
-
-    .book-date {
-      color: #6a0dad;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .book-opinion {
-      color: #666;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .category-stats {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-bottom: 1rem;
-      border-left: 3px solid #6a0dad;
-    }
-
-    .category-stats p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .content-wrapper {
-        flex-direction: column;
-      }
-      
-      .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #e0e0e0;
-      }
-      
-      main {
-        padding: 1rem;
-      }
-
-      .books-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .book-image {
-        max-width: 140px;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="site.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<body>
-  <header>
-    <h1>Deniz Jafari</h1>
-    <p>PhD Candidate, Biomedical Engineering Institute, University of Toronto</p>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/denizjafari/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://x.com/denizjafari" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://iatsl.org/people/djafari.html" target="_blank"><i class="fas fa-university"></i></a>
-      <a href="DenizJafari_CV_2026 (3).pdf" target="_blank" class="btn">Download CV</a>
+<body class="interior-page reads-page">
+  <nav class="topbar" aria-label="Primary navigation">
+    <a class="brand-mark" href="index.html">Deniz Jafari</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="education.html">Education</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="academia.html">Academia</a>
+      <a href="study-recruitment.html">Study</a>
+      <a href="good-reads.html" aria-current="page">Good Reads</a>
+      <a href="contact.html">Ask Me</a>
+      <a class="nav-cta" href="DenizJafari_CV_2026 (3).pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero__inner">
+      <div>
+        <p class="eyebrow">Good reads</p>
+        <h1>Books that left useful fingerprints.</h1>
+        <p class="page-hero__lead">I love audiobooks, especially nonfiction. These are books that shaped how I think about engineering, health, risk, performance, technology, and being a slightly better human in the loop.</p>
+      </div>
+      <div class="page-hero__aside">
+        <p class="page-note"><strong>How to use this</strong> Open a card for the audio link. Hover the cover to read the summary.</p>
+        <p class="page-note"><strong>Selection bias</strong> Strong preference for books that make ideas feel usable by Monday morning.</p>
+      </div>
     </div>
   </header>
 
-  <div class="content-wrapper">
-    <aside class="sidebar">
-      <h3>Navigation</h3>
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research Interests</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="academia.html">Academia</a></li>
-          <li><a href="study-recruitment.html">Study Recruitment</a></li>
-          <li><a href="#good-reads" class="active">Good Reads</a></li>
-          <li><a href="index.html#life">Triathlon</a></li>
-          <li><a href="index.html#life">My Adventures</a></li>
-          <li><a href="contact.html">Ask Me</a></li>
-          <li><a href="#" onclick="alert('Blog under development.'); return false;">Blog</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main>
-      <section id="good-reads">
-        <h2>Good Reads</h2>
-        
-        <div class="page-intro">
-          <h3>Book Recommendations</h3>
-          <p>I love audiobooks, especially nonfiction. Here are a few of my favorites.</p>
-          <p>Each book has been carefully selected based on its impact on my thinking and personal growth. Hover over the book covers to find Audible links for audio versions.</p>
+  <main>
+    <section class="section">
+      <div class="section__inner">
+        <div class="section-heading">
+          <h2>Bookshelf</h2>
+          <p>A compact shelf of ideas worth revisiting. The cards load from the local book data file so the library can keep growing without redesigning the page every time.</p>
         </div>
-        <div id="books-container" class="books-grid" style="margin-top: 2rem;">
-            <!-- Books will be dynamically injected here -->
-        </div>
+        <div id="books-container" class="books-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('books_data.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const container = document.getElementById('books-container');
-                        
-                        // Adding some CSS for the summary hover
-                        const style = document.createElement('style');
-                        style.textContent = `
-                            .book-card {
-                                display: flex;
-                                flex-direction: column;
-                                text-align: center;
-                                background: #f8f9fa;
-                                border-radius: 8px;
-                                padding: 1rem;
-                                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-                                transition: transform 0.3s;
-                                height: 100%;
-                            }
-                            .book-card:hover {
-                                transform: translateY(-5px);
-                            }
-                            .book-cover-container {
-                                position: relative;
-                                width: 100%;
-                                aspect-ratio: 2/3;
-                                margin-bottom: 1rem;
-                                overflow: hidden;
-                                border-radius: 4px;
-                                cursor: pointer;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                background: #e0e0e0;
-                            }
-                            .book-cover {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                            }
-                            .book-summary-overlay {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                right: 0;
-                                bottom: 0;
-                                background: rgba(106, 13, 173, 0.95);
-                                color: white;
-                                opacity: 0;
-                                transition: opacity 0.3s ease;
-                                padding: 1rem;
-                                font-size: 0.85rem;
-                                overflow-y: auto;
-                                text-align: left;
-                            }
-                            .book-cover-container:hover .book-summary-overlay {
-                                opacity: 1;
-                            }
-                            .book-title {
-                                font-weight: bold;
-                                font-size: 1.1rem;
-                                margin-bottom: 0.5rem;
-                            }
-                            .book-author {
-                                color: #6a0dad;
-                                font-size: 0.9rem;
-                                margin-bottom: auto;
-                            }
-                        `;
-                        document.head.appendChild(style);
-
-                        // Generate books
-                        Object.keys(data).forEach(title => {
-                            const book = data[title];
-                            
-                            const card = document.createElement('div');
-                            card.className = 'book-card';
-                            
-                            // To get image, we use a public API like OpenLibrary by title, falling back to a placeholder
-                            const encodedTitle = encodeURIComponent(title);
-                            
-                            // We construct the HTML. Clicking the cover goes to audible link.
-                            card.innerHTML = `
-                                <a href="${book.link}" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <div class="book-cover-container">
-                                        <!-- Placeholder text while image loads or if it fails -->
-                                        <div style="position:absolute; padding: 1rem; font-weight:bold; color:#777;">${title}</div>
-                                        <img class="book-cover" src="https://covers.openlibrary.org/b/title/${encodedTitle}-M.jpg" onerror="this.style.opacity='0'" alt="${title}" style="position:relative; z-index:1; background:white;">
-                                        <div class="book-summary-overlay" style="z-index:2">
-                                            <strong>${title}</strong><br><br>
-                                            ${book.summary}
-                                        </div>
-                                    </div>
-                                    <div class="book-title">${title}</div>
-                                    <div class="book-author">By ${book.author}</div>
-                                </a>
-                            `;
-                            
-                            container.appendChild(card);
-                        });
-                    })
-                    .catch(err => console.error('Error loading books data:', err));
-            });
-        </script>
-</section>
-    </main>
-  </div>
-
-  <footer>
-    &copy; 2025 vibed by Deniz Jafari ;)
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>&copy; 2026 Deniz Jafari</span>
+      <span>Reading counts as debugging your priors.</span>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("books_data.json")
+        .then(function(response) {
+          if (!response.ok) {
+            throw new Error("Could not load books_data.json");
+          }
+          return response.json();
+        })
+        .then(function(data) {
+          const container = document.getElementById("books-container");
+
+          Object.keys(data).forEach(function(title) {
+            const book = data[title];
+            const encodedTitle = encodeURIComponent(title);
+
+            const card = document.createElement("article");
+            card.className = "book-card";
+
+            const link = document.createElement("a");
+            link.href = book.link;
+            link.target = "_blank";
+            link.rel = "noopener";
+            link.setAttribute("aria-label", title + " by " + book.author);
+
+            const cover = document.createElement("div");
+            cover.className = "book-cover-container";
+
+            const placeholder = document.createElement("div");
+            placeholder.className = "book-placeholder";
+            placeholder.textContent = title;
+
+            const image = document.createElement("img");
+            image.className = "book-cover";
+            image.src = "https://covers.openlibrary.org/b/title/" + encodedTitle + "-M.jpg";
+            image.alt = title + " book cover";
+            image.addEventListener("error", function() {
+              image.classList.add("is-missing");
+            });
+
+            const overlay = document.createElement("div");
+            overlay.className = "book-summary-overlay";
+
+            const overlayTitle = document.createElement("strong");
+            overlayTitle.textContent = title;
+            overlay.appendChild(overlayTitle);
+            overlay.appendChild(document.createElement("br"));
+            overlay.appendChild(document.createElement("br"));
+            overlay.appendChild(document.createTextNode(book.summary));
+
+            const bookTitle = document.createElement("div");
+            bookTitle.className = "book-title";
+            bookTitle.textContent = title;
+
+            const author = document.createElement("div");
+            author.className = "book-author";
+            author.textContent = "By " + book.author;
+
+            cover.appendChild(placeholder);
+            cover.appendChild(image);
+            cover.appendChild(overlay);
+            link.appendChild(cover);
+            link.appendChild(bookTitle);
+            link.appendChild(author);
+            card.appendChild(link);
+            container.appendChild(card);
+          });
+        })
+        .catch(function(error) {
+          const container = document.getElementById("books-container");
+          const message = document.createElement("p");
+          message.className = "content-card";
+          message.textContent = "The book list could not load right now. The data file may be missing or blocked by the browser.";
+          container.replaceWith(message);
+          console.error("Error loading books data:", error);
+        });
+    });
+  </script>
 </body>
-</html> 
+</html>
