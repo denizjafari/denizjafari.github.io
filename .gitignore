@@ -1,6 +1,5 @@
 .env
 .env.*
-!.env.example
 .DS_Store
 __pycache__/
 .venv/
@@ -8,3 +7,5 @@ __pycache__/
 *.p12
 *.pfx
 *.key
+instagram/
+me/
