@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https://covers.openlibrary.org; connect-src 'self'; media-src 'self'; form-action 'self' https://formsubmit.co;">
   <meta name="description" content="Deniz Jafari — biomedical engineer building human-in-the-loop rehabilitation robotics, wearables, and assistive systems. Toronto, Canada.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#05070c">
   <meta property="og:title" content="Deniz Jafari // Operator: Human + Machine">
   <meta property="og:description" content="Rehab robotics, wearables, neuro-assist. Built so people stay independent, capable, and slightly extra.">
@@ -75,7 +77,7 @@
           <a class="icon-link" href="https://x.com/denizjafari" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a>
           <a class="icon-link" href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
           <a class="icon-link" href="https://iatsl.org/people/djafari.html" target="_blank" rel="noopener" aria-label="IATSL"><i class="fas fa-university" aria-hidden="true"></i></a>
-          <a class="icon-link" href="mailto:dnz.jfr@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a class="icon-link" href="#direct-line" aria-label="Contact form"><i class="fas fa-paper-plane" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -363,7 +365,7 @@
             <p class="joke">BASc Aerospace, MHSc Clinical Eng, MSc Rehab Sci. The PhD is the stubborn one.</p>
           </div>
           <div class="metric hud">
-            <span class="num">$150K+</span>
+            <span class="num">$250K+</span>
             <span class="label">Grants &amp; loans secured</span>
             <p class="joke">Translation: I have written a <em>lot</em> of polite emails.</p>
           </div>
@@ -398,19 +400,19 @@
           <div>
             <p class="eyebrow">// Open a direct line</p>
             <h2>Find me where the engineers and the athletes argue.</h2>
-            <p style="color:var(--ink-dim); margin: 0 0 4px;">I love conversations about rehab robotics, wearables, neuro-assistive systems, gamified therapy, entrepreneurship, endurance training, and what to read next. If you're building something at any of those intersections — let's talk.</p>
+            <p style="color:var(--ink-dim); margin: 0 0 4px;">I love conversations about rehab robotics, wearables, neuro-assistive systems, gamified therapy, entrepreneurship, endurance training, and what to read next. If you're building something at any of those intersections, use the form and I’ll reply there.</p>
             <div class="channels">
-              <a class="channel" href="mailto:dnz.jfr@gmail.com"><i class="fa-solid fa-envelope"></i> dnz.jfr@gmail.com</a>
+              <a class="channel" href="#direct-line"><i class="fa-solid fa-paper-plane"></i> Contact form only</a>
               <a class="channel" href="https://www.linkedin.com/in/denizjafari/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> /in/denizjafari</a>
               <a class="channel" href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Scholar profile</a>
             </div>
           </div>
 
-          <form class="contact-form" action="https://formsubmit.co/dnz.jfr@gmail.com" method="POST">
+          <form class="contact-form" data-formsubmit-form data-form-success="Thanks. Your note is on its way." method="POST">
+            <input type="hidden" name="_next" value="https://denizjafari.com/?sent=1#direct-line">
             <input type="hidden" name="_subject" value="Hello from denizjafari.github.io">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label>
               Your name
               <input type="text" name="name" required placeholder="who's transmitting?">
@@ -437,6 +439,7 @@
     </div>
   </footer>
 
+  <script src="site.js"></script>
   <script>
     // Reveal-on-scroll
     const io = new IntersectionObserver((entries) => {

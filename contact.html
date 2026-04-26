@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https://covers.openlibrary.org; connect-src 'self'; media-src 'self'; form-action 'self' https://formsubmit.co;">
   <meta name="description" content="Contact Deniz Jafari — research collaborations, rehab robotics, wearable sensing, assistive technology, consulting, and conversations.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#05070c">
   <title>Direct Line // Deniz Jafari</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -49,7 +51,7 @@
           <article class="feature-callout hud">
             <span class="card-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
             <h3>Consulting & grant work</h3>
-            <p>I've helped technology startups secure $150K+ in government grants and loans. I can help with business plans, grant and funding applications, scientific proposal feedback, NSERC post-graduate applications, and digital technology implementation for early-stage companies.</p>
+            <p>I've helped technology startups secure $250K+ in government grants and loans. I can help with business plans, grant and funding applications, scientific proposal feedback, NSERC post-graduate applications, and digital technology implementation for early-stage companies.</p>
             <p style="color:var(--ink-mute);font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;">// My superpower is making bureaucratic forms sound like a clear story.</p>
           </article>
 
@@ -66,12 +68,12 @@
 
           <dl class="contact-list">
             <div>
-              <dt>Email · primary</dt>
-              <dd><a href="mailto:dnz.jfr@gmail.com">dnz.jfr@gmail.com</a></dd>
+              <dt>Preferred contact</dt>
+              <dd>Use the form on this page.</dd>
             </div>
             <div>
-              <dt>Email · academic</dt>
-              <dd><a href="mailto:deniz.jafari@utoronto.ca">deniz.jafari@utoronto.ca</a></dd>
+              <dt>Response style</dt>
+              <dd>Best for thoughtful project notes, collaboration ideas, and study follow-up.</dd>
             </div>
             <div>
               <dt>Location</dt>
@@ -88,14 +90,14 @@
           <article class="content-card tint hud">
             <span class="card-icon" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:rgba(42,212,255,0.12);border:1px solid rgba(42,212,255,0.35);color:var(--cyan);margin-bottom:14px;font-size:18px;"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span>
             <h3>Send a transmission</h3>
-            <p>Form goes straight to my inbox. No email client required. No newsletter, no "hey just bumping this." Promise.</p>
+            <p>Use the form below and I’ll reply from there. No email client required. No newsletter, no "hey just bumping this." Promise.</p>
           </article>
 
-          <form class="contact-form" action="https://formsubmit.co/dnz.jfr@gmail.com" method="POST">
+          <form class="contact-form" data-formsubmit-form data-form-success="Thanks. Your transmission has been sent." method="POST">
+            <input type="hidden" name="_next" value="https://denizjafari.com/contact.html?sent=1">
             <input type="hidden" name="_subject" value="Direct line — denizjafari.github.io">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="_honey" style="display:none">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <label>
               Your name
               <input type="text" name="name" required placeholder="who's transmitting?">
@@ -115,7 +117,6 @@
             <button type="submit" class="button primary"><i class="fa-solid fa-paper-plane"></i> Transmit</button>
           </form>
 
-          <p style="color:var(--ink-mute);font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:0;">// Form runs on FormSubmit.co — free, no account required, just confirms once and forwards everything to dnz.jfr@gmail.com.</p>
         </div>
       </div>
     </section>
@@ -128,6 +129,7 @@
     </div>
   </footer>
 
+  <script src="site.js"></script>
   <script>
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }

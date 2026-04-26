@@ -7,7 +7,7 @@ from pypdf import PdfReader
 import gradio as gr
 
 
-load_dotenv(override=True)
+load_dotenv()
 
 def push(text):
     requests.post(
@@ -131,4 +131,3 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 if __name__ == "__main__":
     me = Me()
     gr.ChatInterface(me.chat, type="messages").launch()
-    

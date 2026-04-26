@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https://covers.openlibrary.org; connect-src 'self'; media-src 'self'; form-action 'self' https://formsubmit.co;">
   <meta name="description" content="Study recruitment for Deniz Jafari's user-centered robotic rehabilitation research.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Study Recruitment - Deniz Jafari</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
@@ -59,10 +61,12 @@
 
         <div class="form-shell">
           <h3>Get in touch</h3>
-          <p>This form sends directly to my inbox at dnz.jfr@gmail.com.</p>
-          <form action="https://formsubmit.co/dnz.jfr@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://denizjafari.com/study-recruitment.html">
+          <p>Share your details in the form and I’ll follow up with next steps.</p>
+          <form data-formsubmit-form data-form-success="Thanks. Your study interest has been sent." method="POST">
+            <input type="hidden" name="_next" value="https://denizjafari.com/study-recruitment.html?sent=1">
             <input type="hidden" name="_subject" value="New submission from Study Recruitment Page!">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             <div class="form-group">
               <label for="name">Name</label>
@@ -97,5 +101,6 @@
       <span>Research works better with humans in the loop.</span>
     </div>
   </footer>
+  <script src="site.js"></script>
 </body>
 </html>

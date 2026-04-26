@@ -866,6 +866,14 @@ body::after {
   box-shadow: 0 0 0 3px rgba(42,212,255,0.18);
 }
 .contact-form button { justify-self: start; }
+.form-status {
+  margin: 0 0 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(42, 212, 255, 0.35);
+  background: rgba(42, 212, 255, 0.10);
+  color: var(--ink);
+}
 
 /* ============== SOCIAL ROW ============== */
 .social-row { display: flex; gap: 12px; margin-top: 28px; }
