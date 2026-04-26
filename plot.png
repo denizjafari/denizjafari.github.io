@@ -1,0 +1,8 @@
+// System Development Flow
+digraph {
+	A [label="🔍 Identifying Gaps"]
+	B [label="🛠️ System Design & Integration"]
+	C [label="🤖 Human-Robot Interaction"]
+	A -> B
+	B -> C
+}

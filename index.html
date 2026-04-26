@@ -3,182 +3,428 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Deniz Jafari builds human-in-the-loop rehabilitation robotics, wearable sensing, and assistive technology for active independence across the lifespan.">
-  <meta property="og:title" content="Deniz Jafari | Human + Machine + Motion">
-  <meta property="og:description" content="Biomedical engineering, rehabilitation robotics, wearable sensing, and the pursuit of active independence.">
+  <meta name="description" content="Deniz Jafari — biomedical engineer building human-in-the-loop rehabilitation robotics, wearables, and assistive systems. Toronto, Canada.">
+  <meta name="theme-color" content="#05070c">
+  <meta property="og:title" content="Deniz Jafari // Operator: Human + Machine">
+  <meta property="og:description" content="Rehab robotics, wearables, neuro-assist. Built so people stay independent, capable, and slightly extra.">
   <meta property="og:image" content="deniz.jpeg">
-  <title>Deniz Jafari | Human + Machine + Motion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+  <title>Deniz Jafari // Operator: Human + Machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="site.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body class="home-page">
   <nav class="topbar" aria-label="Primary navigation">
-    <a class="brand-mark" href="index.html">Deniz Jafari</a>
+    <a class="brand-mark" href="index.html">DENIZ.JAFARI</a>
     <div class="nav-links">
       <a href="index.html" aria-current="page">Home</a>
       <a href="research.html">Research</a>
-      <a href="education.html">Education</a>
+      <a href="education.html">Path</a>
       <a href="teaching.html">Teaching</a>
       <a href="academia.html">Academia</a>
       <a href="study-recruitment.html">Study</a>
-      <a href="good-reads.html">Good Reads</a>
-      <a href="contact.html">Ask Me</a>
-      <a class="nav-cta" href="DenizJafari_CV_2026 (3).pdf" target="_blank" rel="noopener">CV</a>
+      <a href="good-reads.html">Reads</a>
+      <a href="contact.html">Ping me</a>
+      <a class="nav-cta" href="DenizJafari_CV_2026 (3).pdf" target="_blank" rel="noopener">CV ↗</a>
     </div>
   </nav>
 
+  <!-- ============== HERO ============== -->
   <header class="hero" id="top">
-    <div class="hero__content">
-      <p class="eyebrow">Biomedical engineering meets active life</p>
-      <h1>Deniz Jafari</h1>
-      <p class="hero__lead">I am building toward technologies that stay close to the body: wearable sensors, rehabilitation robots, and human-in-the-loop intelligence that help people move, recover, remember, train, and remain independent for as long as possible.</p>
-      <div class="hero__actions">
-        <a class="button primary" href="research.html"><i class="fa-solid fa-wave-square" aria-hidden="true"></i> Explore the research vision</a>
-        <a class="button secondary" href="study-recruitment.html"><i class="fa-solid fa-hand-holding-medical" aria-hidden="true"></i> Study recruitment</a>
+    <div class="hero__bg" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="media/videos/IMG_6067_poster.jpg">
+        <source src="media/videos/IMG_6067.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero__layout">
+      <div class="hero__content">
+        <div class="hero__telemetry">
+          <span class="live"></span>
+          <span>OPERATOR ONLINE — TORONTO 43.66°N · 79.39°W</span>
+        </div>
+
+        <h1 class="hero__name">
+          <span class="glitch" data-text="DENIZ">DENIZ</span><br>
+          <span class="glitch" data-text="JAFARI">JAFARI</span>
+        </h1>
+
+        <p class="hero__role">PhD candidate, <b>biomedical engineering</b> // rehab robotics // wearable nervous system for the body you already have</p>
+
+        <p class="hero__lead">
+          I build technology that stays close to the body — robots that help you recover, sensors that whisper before you injure yourself, and software that turns rehab from a chore into something you'd actually open the app for. Less screwdriver-on-the-couch energy, more J.A.R.V.I.S.-with-a-foam-roller.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button primary" href="#mission"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Mission brief</a>
+          <a class="button secondary" href="#field-log"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i> Field log</a>
+          <a class="button ghost" href="#direct-line"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Open a direct line</a>
+        </div>
+
+        <div class="hero__chips" aria-label="Currently">
+          <span>Building rehab robots</span>
+          <span>Reading on neuroplasticity</span>
+          <span>Training Q3 race block</span>
+          <span>Stocking peanut butter</span>
+        </div>
+
+        <div class="social-row" aria-label="Social links">
+          <a class="icon-link" href="https://www.linkedin.com/in/denizjafari/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          <a class="icon-link" href="https://x.com/denizjafari" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a class="icon-link" href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+          <a class="icon-link" href="https://iatsl.org/people/djafari.html" target="_blank" rel="noopener" aria-label="IATSL"><i class="fas fa-university" aria-hidden="true"></i></a>
+          <a class="icon-link" href="mailto:dnz.jfr@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        </div>
       </div>
-      <div class="social-row" aria-label="Social links">
-        <a class="icon-link" href="https://www.linkedin.com/in/denizjafari/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-        <a class="icon-link" href="https://x.com/denizjafari" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-        <a class="icon-link" href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
-        <a class="icon-link" href="https://iatsl.org/people/djafari.html" target="_blank" rel="noopener" aria-label="Intelligent Assistive Technology and Systems Lab"><i class="fas fa-university" aria-hidden="true"></i></a>
+
+      <!-- ============== ARC REACTOR ============== -->
+      <div class="arc-reactor" aria-hidden="true">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="core" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="35%" stop-color="#9ce8ff"/>
+              <stop offset="70%" stop-color="#2ad4ff"/>
+              <stop offset="100%" stop-color="#0a7fa8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="ringGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#2ad4ff"/>
+              <stop offset="100%" stop-color="#ffb547"/>
+            </linearGradient>
+            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4"/>
+            </filter>
+          </defs>
+
+          <!-- ambient outer pulse -->
+          <circle cx="200" cy="200" r="190" fill="none" stroke="#2ad4ff" stroke-opacity="0.10" stroke-width="1"/>
+          <circle cx="200" cy="200" r="178" fill="none" stroke="#2ad4ff" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="2 6"/>
+
+          <!-- slow rotating outer ring with tick marks -->
+          <g class="spin-slow">
+            <circle cx="200" cy="200" r="160" fill="none" stroke="url(#ringGrad)" stroke-opacity="0.55" stroke-width="1"/>
+            <g stroke="#6be3ff" stroke-width="1.5" stroke-linecap="round">
+              <line x1="200" y1="38" x2="200" y2="56"/>
+              <line x1="200" y1="344" x2="200" y2="362"/>
+              <line x1="38" y1="200" x2="56" y2="200"/>
+              <line x1="344" y1="200" x2="362" y2="200"/>
+              <line x1="86" y1="86" x2="98" y2="98" stroke-opacity="0.7"/>
+              <line x1="302" y1="302" x2="314" y2="314" stroke-opacity="0.7"/>
+              <line x1="86" y1="314" x2="98" y2="302" stroke-opacity="0.7"/>
+              <line x1="302" y1="98" x2="314" y2="86" stroke-opacity="0.7"/>
+            </g>
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="#6be3ff" fill-opacity="0.7" letter-spacing="2">
+              <text x="200" y="30" text-anchor="middle">N · 000</text>
+              <text x="378" y="204" text-anchor="end">090 · E</text>
+              <text x="200" y="380" text-anchor="middle">180 · S</text>
+              <text x="22" y="204">W · 270</text>
+            </g>
+          </g>
+
+          <!-- mid rotating ring (counter) -->
+          <g class="spin-med">
+            <circle cx="200" cy="200" r="130" fill="none" stroke="#2ad4ff" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="6 4"/>
+            <g fill="#2ad4ff" fill-opacity="0.85">
+              <circle cx="200" cy="70" r="3"/>
+              <circle cx="330" cy="200" r="3"/>
+              <circle cx="200" cy="330" r="3"/>
+              <circle cx="70" cy="200" r="3"/>
+            </g>
+          </g>
+
+          <!-- fast rotating ring with arc segment -->
+          <g class="spin-fast">
+            <circle cx="200" cy="200" r="108" fill="none" stroke="#2ad4ff" stroke-opacity="0.25" stroke-width="1"/>
+            <path d="M200 92 a108 108 0 0 1 88 184" fill="none" stroke="#2ad4ff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M200 308 a108 108 0 0 1 -78 -160" fill="none" stroke="#ffb547" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          </g>
+
+          <!-- Static reactor coils (10-pointed star pattern) -->
+          <g transform="translate(200 200)">
+            <g stroke="#2ad4ff" stroke-width="1.4" fill="none" opacity="0.85">
+              <circle r="78" stroke-opacity="0.35"/>
+              <circle r="58" stroke-opacity="0.5"/>
+            </g>
+            <!-- coils -->
+            <g stroke="url(#ringGrad)" stroke-width="2" fill="none" stroke-linecap="round">
+              <g id="coil"><path d="M0 -76 L0 -58 M-6 -64 L6 -64"/></g>
+              <use href="#coil" transform="rotate(36)"/>
+              <use href="#coil" transform="rotate(72)"/>
+              <use href="#coil" transform="rotate(108)"/>
+              <use href="#coil" transform="rotate(144)"/>
+              <use href="#coil" transform="rotate(180)"/>
+              <use href="#coil" transform="rotate(216)"/>
+              <use href="#coil" transform="rotate(252)"/>
+              <use href="#coil" transform="rotate(288)"/>
+              <use href="#coil" transform="rotate(324)"/>
+            </g>
+            <!-- center triangular coil cage -->
+            <polygon points="0,-44 38,22 -38,22" fill="none" stroke="#9ce8ff" stroke-width="1.4" opacity="0.85"/>
+            <polygon points="0,44 -38,-22 38,-22" fill="none" stroke="#9ce8ff" stroke-width="1.4" opacity="0.85"/>
+            <!-- core glow -->
+            <circle r="36" fill="url(#core)" filter="url(#softGlow)"/>
+            <circle r="14" fill="#ffffff" opacity="0.95"/>
+          </g>
+
+          <!-- Telemetry text -->
+          <g font-family="JetBrains Mono, monospace" font-size="8" fill="#9fb3cf" letter-spacing="1.5">
+            <text x="200" y="395" text-anchor="middle">ARC // OUTPUT 100% // OPERATOR LINK STABLE</text>
+          </g>
+        </svg>
       </div>
     </div>
   </header>
 
-  <aside class="signal-strip" aria-label="Research and life themes">
+  <!-- ============== SIGNAL STRIP ============== -->
+  <aside class="signal-strip" aria-label="Quick signals">
     <div>
-      <strong>Human in the loop</strong>
-      <span>Technology that listens to the person, adapts, and keeps agency with the user.</span>
+      <strong>Status</strong>
+      <span>PhD candidate, BME @ University of Toronto</span>
     </div>
     <div>
-      <strong>Robotic rehab</strong>
-      <span>Home-based upper-limb systems that make therapy more accessible and motivating.</span>
+      <strong>Lab</strong>
+      <span>IATSL with Dr. Alex Mihailidis</span>
     </div>
     <div>
-      <strong>Wearable sensing</strong>
-      <span>Signals from movement, effort, physiology, and context turned into useful feedback.</span>
+      <strong>Stack</strong>
+      <span>Robots · sensors · games · pep talks</span>
     </div>
     <div>
-      <strong>Active independence</strong>
-      <span>Hiking, skiing, triathlon, memory, strength, and dignity across the lifespan.</span>
+      <strong>Off-duty</strong>
+      <span>Hiking, triathlon, snow, books, snacks</span>
     </div>
   </aside>
 
   <main>
-    <section class="section" id="vision">
-      <div class="section__inner vision-grid">
-        <div class="statement">
-          <p class="eyebrow">North star</p>
-          <p class="highlight">Superhuman, to me, does not mean replacing the human. It means protecting the human.</p>
-          <p>I am fascinated by the integration of hardware, software, and biology: systems that can augment what we do well, support what is weakening, and help us keep choosing our own adventures.</p>
-          <p>My long-term goal is deeply personal and deeply scientific: to help people preserve independence, cognition, strength, mobility, and confidence until the end of life.</p>
+    <!-- ============== MISSION ============== -->
+    <section class="section" id="mission">
+      <div class="section__inner mission-grid reveal">
+        <div class="statement hud">
+          <p class="eyebrow">Mission brief // 001</p>
+          <p class="pull">Make humans <em>superhuman</em>, without making them less <em>human</em>.</p>
+          <p>I'm fascinated by the seam where biology, hardware, and software meet — the strange, beautiful interface between a body that already knows how to do extraordinary things and machines that can quietly cover for the parts that get tired, hurt, or forget.</p>
+          <p>The dream isn't to <em>replace</em> the human. It's to keep the human in charge — moving, choosing, remembering, recovering — for as long as possible.</p>
+          <p>Or, in the version I tell at parties: I'm building Iron Man for your physiotherapy session, your hiking trip, and your future eighty-year-old self.</p>
         </div>
         <figure class="visual-frame">
           <img src="research-neurotech.svg" alt="Stylized human-machine research system with sensors, signals, and robotic assistance">
-          <figcaption class="visual-caption"><span>Closed-loop augmentation</span><span class="pulse" aria-hidden="true"></span></figcaption>
+          <figcaption class="visual-caption"><span>Closed-loop · sensors → ai → person</span><span class="pulse" aria-hidden="true"></span></figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section alt" id="research-interests">
+    <!-- ============== BUILD STACK ============== -->
+    <section class="section alt" id="build-stack">
       <div class="section__inner">
-        <div class="section-heading">
-          <h2>What I Want To Build</h2>
-          <p>Research interests, but written as a design brief for a life: technologies that help people recover after injury, optimize performance today, and compensate gracefully as the body and brain change with age.</p>
+        <div class="section-heading reveal">
+          <h2>The <span class="accent">build stack</span>.<br>What I'm prototyping into existence.</h2>
+          <p>Six research interests, written less like a thesis abstract and more like a design brief for a life. Each one is a real project, a real ache I want to fix, or a real future I'd like to be alive in.</p>
         </div>
-        <div class="research-grid">
-          <article class="research-card">
+
+        <div class="research-grid reveal">
+          <article class="research-card hud">
+            <span class="tag">// 01</span>
             <span class="card-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
-            <h3>Rehabilitation robots that fit real homes</h3>
-            <p>Modular, approachable systems for upper-limb therapy after stroke, designed around daily life rather than perfect lab conditions.</p>
+            <h3>Rehab robots that fit a real living room</h3>
+            <p>Modular, friendly, gamified upper-limb systems for stroke recovery. Designed around someone's couch, not a gleaming clinical lab. Bonus: they don't beep at you condescendingly.</p>
           </article>
-          <article class="research-card">
+          <article class="research-card amber hud">
+            <span class="tag">// 02</span>
+            <span class="card-icon"><i class="fa-solid fa-gamepad" aria-hidden="true"></i></span>
+            <h3>Rehab as a game you'd actually open</h3>
+            <p>I've broken enough things to know rehab is boring. So I'm gamifying it — adaptive difficulty, real-time form feedback, leaderboards your physio secretly likes too. Make doing your exercises feel like a small win, not a small punishment.</p>
+          </article>
+          <article class="research-card hud">
+            <span class="tag">// 03</span>
             <span class="card-icon"><i class="fa-solid fa-person-running" aria-hidden="true"></i></span>
-            <h3>Wearables for performance and resilience</h3>
-            <p>Sensors that turn movement, fatigue, effort, and recovery into feedback people can actually use while training, working, or exploring outdoors.</p>
+            <h3>Wearables that whisper before you wreck yourself</h3>
+            <p>Sensors that turn fatigue, form, effort and asymmetry into feedback you can use mid-rep, mid-trail, mid-set. Less "we'll review it after" and more "left hip's drifting, fix it now."</p>
           </article>
-          <article class="research-card">
+          <article class="research-card amber hud">
+            <span class="tag">// 04</span>
             <span class="card-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
-            <h3>Cognitive independence</h3>
-            <p>Assistive systems that support memory, planning, and confidence, especially when aging or neurological disease threatens independence.</p>
+            <h3>Cognitive co-pilot</h3>
+            <p>Alzheimer's runs in my family. So I care, professionally and personally, about systems that support memory, navigation, and confidence — assistive tech that protects independence when the brain starts editing without permission.</p>
           </article>
-          <article class="research-card">
+          <article class="research-card hud">
+            <span class="tag">// 05</span>
             <span class="card-icon"><i class="fa-solid fa-arrows-spin" aria-hidden="true"></i></span>
-            <h3>Human-in-the-loop intelligence</h3>
-            <p>Adaptive systems that learn from human goals, physiology, and context while leaving the user in command.</p>
+            <h3>Human-in-the-loop AI</h3>
+            <p>The kind of machine learning that listens before it talks. Adapts to your physiology, your fatigue, your goals — and never stops asking "is this still helping?". Agency stays with the person; the model stays helpful.</p>
           </article>
-          <article class="research-card">
-            <span class="card-icon"><i class="fa-solid fa-house-medical" aria-hidden="true"></i></span>
-            <h3>Health technology beyond the clinic</h3>
-            <p>Tools that make rehabilitation, monitoring, coaching, and support available where life actually happens.</p>
-          </article>
-          <article class="research-card">
+          <article class="research-card amber hud">
+            <span class="tag">// 06</span>
             <span class="card-icon"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i></span>
-            <h3>Technology for adventurous aging</h3>
-            <p>A future where people can keep hiking, skiing, racing, learning, remembering, and moving with dignity for as long as possible.</p>
+            <h3>Tech for adventurous aging</h3>
+            <p>A future where my friends and I can still hike, ski, race, remember each other's birthdays, and argue over backcountry coffee at 80. Engineering as a long-term love letter to being outside.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ============== LIFESPAN LOOP ============== -->
     <section class="section dark" id="lifespan">
       <div class="section__inner">
-        <div class="section-heading">
-          <h2>The Lifespan Loop</h2>
-          <p>The same core idea can serve different seasons of life: optimize, rehabilitate, and compensate without surrendering identity or freedom.</p>
+        <div class="section-heading reveal">
+          <h2>The <span class="accent">lifespan loop</span>.<br>One idea, three seasons of life.</h2>
+          <p>The same closed-loop machinery — sense, decide, support — shows up at every stage. Optimize when you're peaking. Rehabilitate when you're rebuilding. Compensate when biology starts negotiating. Identity stays. Independence stays.</p>
         </div>
-        <div class="lifeline">
-          <article class="lifeline-step" data-step="1">
-            <h3>Optimize now</h3>
-            <p>Use sensing, feedback, and coaching to improve movement, endurance, learning, recovery, and awareness.</p>
+        <div class="lifeline reveal">
+          <article class="lifeline-step">
+            <h3>Optimize.</h3>
+            <p>Sensing + feedback + smart coaching to push movement, endurance, learning, and recovery further than yesterday. The Tony-Stark-in-the-gym phase.</p>
           </article>
-          <article class="lifeline-step" data-step="2">
-            <h3>Recover better</h3>
-            <p>Build rehabilitation tools that are motivating, measurable, personalized, and usable beyond the hospital.</p>
+          <article class="lifeline-step">
+            <h3>Rehabilitate.</h3>
+            <p>When something breaks, the system gets motivating, measurable, and personal. Therapy that travels home with you and shows up at 7am whether your physio is on call or not.</p>
           </article>
-          <article class="lifeline-step" data-step="3">
-            <h3>Compensate with dignity</h3>
-            <p>When decline arrives, use technology to preserve agency: memory support, mobility support, confidence, and independence.</p>
+          <article class="lifeline-step">
+            <h3>Compensate.</h3>
+            <p>When biology starts charging interest, technology preserves agency: memory cues, mobility support, gentle confidence. Dignity is a design constraint, not a feature.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="life">
-      <div class="section__inner life-grid">
-        <div class="photo-stack">
-          <figure class="photo-card">
-            <img src="DenizJafariRaw.png" alt="Deniz Jafari by the sea in Skagen, Denmark">
-          </figure>
-          <p class="photo-note">At the edge of land in Skagen, Denmark, where two seas meet. A useful reminder that the best engineering often lives at boundaries too.</p>
-        </div>
-        <div class="life-copy">
-          <p class="eyebrow">Life outside the lab</p>
-          <h2>Movement is the point.</h2>
-          <p>I love being outdoors and active. Hiking, skiing, triathlon, and long days in motion are not side notes to the research. They are part of why the work matters.</p>
-          <p>The dream is not eternal life. The dream is an independent, capable, curious life: a body that can still move, a mind that can still remember, and tools that help us keep doing what makes life feel like ours.</p>
-          <div class="tag-row" aria-label="Personal interests">
-            <span>Triathlon</span>
-            <span>Hiking</span>
-            <span>Skiing</span>
-            <span>Robotics</span>
-            <span>Wearables</span>
-            <span>Rehab tech</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="ask-me">
+    <!-- ============== FIELD LOG (gallery) ============== -->
+    <section class="section field-log" id="field-log">
       <div class="section__inner">
-        <div class="ask-panel">
-          <div>
-            <h2>Ask Me Anything</h2>
-            <p>I like conversations about rehabilitation robotics, sensors, human augmentation, entrepreneurship, endurance training, books, and the weirdly beautiful places where those things overlap.</p>
+        <div class="section-heading reveal">
+          <h2>Field <span class="accent">log</span>.<br>Frames from the operator's actual life.</h2>
+          <p>Movement is the point. Hiking, skiing, triathlon, sun, snow, an embarrassing amount of trail snacks. These aren't side notes to the research — they're <em>why</em> it matters. The bodies and brains we're trying to protect want to keep doing these things.</p>
+        </div>
+
+        <div class="gallery reveal">
+          <figure class="tile-a">
+            <img src="media/photos/DSCF7656_lg.jpg" alt="Wide alpine landscape, golden hour" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 01 · Alpine, golden hour</figcaption>
+          </figure>
+          <figure class="tile-b">
+            <img src="media/photos/IMG_3245_md.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 02 · Trail life</figcaption>
+          </figure>
+          <figure class="tile-c">
+            <img src="media/photos/IMG_3454_md.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 03 · Cold air, warm coffee</figcaption>
+          </figure>
+          <figure class="tile-d">
+            <video autoplay muted loop playsinline preload="metadata"
+                   poster="media/videos/IMG_5821_poster.jpg">
+              <source src="media/videos/IMG_5821.mp4" type="video/mp4">
+            </video>
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 04 · In motion</figcaption>
+          </figure>
+          <figure class="tile-e">
+            <img src="media/photos/DSCF8422_md.jpg" alt="Mountain ridge" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 05 · Ridge line</figcaption>
+          </figure>
+          <figure class="tile-f">
+            <img src="media/photos/IMG_2058_md.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 06 · Big sky</figcaption>
+          </figure>
+          <figure class="tile-g">
+            <img src="media/photos/IMG_3452_md.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 07 · Snow day</figcaption>
+          </figure>
+          <figure class="tile-h">
+            <img src="media/photos/IMG_7760_md.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 08 · Sunset re-entry</figcaption>
+          </figure>
+          <figure class="tile-i">
+            <img src="media/photos/DSCF9809_lg.jpg" alt="Outdoor adventure" loading="lazy">
+            <span class="hud-corners"><span></span></span>
+            <figcaption>// FIELD 09 · Off the grid, on the clock</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== TELEMETRY (stats) ============== -->
+    <section class="section alt" id="telemetry">
+      <div class="section__inner">
+        <div class="section-heading reveal">
+          <h2>Operator <span class="accent">telemetry</span>.<br>Numbers, lightly seasoned.</h2>
+          <p>A handful of tiles I keep on the dashboard. Some are scientific. Some are mostly snacks. All are real.</p>
+        </div>
+        <div class="telemetry reveal">
+          <div class="metric hud">
+            <span class="num">3</span>
+            <span class="label">Graduate degrees</span>
+            <p class="joke">BASc Aerospace, MHSc Clinical Eng, MSc Rehab Sci. The PhD is the stubborn one.</p>
           </div>
-          <a class="button primary" href="contact.html"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Get in touch</a>
+          <div class="metric hud">
+            <span class="num">$150K+</span>
+            <span class="label">Grants &amp; loans secured</span>
+            <p class="joke">Translation: I have written a <em>lot</em> of polite emails.</p>
+          </div>
+          <div class="metric hud">
+            <span class="num">∞</span>
+            <span class="label">Ideas / week</span>
+            <p class="joke">Approximately 4% of which survive contact with reality. The rest go in a notebook.</p>
+          </div>
+          <div class="metric hud">
+            <span class="num">42°N</span>
+            <span class="label">Default biome</span>
+            <p class="joke">Toronto: where the lab is warm and the lake is rude.</p>
+          </div>
+          <div class="metric hud">
+            <span class="num">2</span>
+            <span class="label">Knees, currently</span>
+            <p class="joke">Personally invested in keeping it that way. Hence: rehab tech.</p>
+          </div>
+          <div class="metric hud">
+            <span class="num">1</span>
+            <span class="label">North star</span>
+            <p class="joke">Independence at 80, with a working brain and a backpack.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIRECT LINE / CONTACT ============== -->
+    <section class="section" id="direct-line">
+      <div class="section__inner reveal">
+        <div class="contact-card hud">
+          <div>
+            <p class="eyebrow">// Open a direct line</p>
+            <h2>Find me where the engineers and the athletes argue.</h2>
+            <p style="color:var(--ink-dim); margin: 0 0 4px;">I love conversations about rehab robotics, wearables, neuro-assistive systems, gamified therapy, entrepreneurship, endurance training, and what to read next. If you're building something at any of those intersections — let's talk.</p>
+            <div class="channels">
+              <a class="channel" href="mailto:dnz.jfr@gmail.com"><i class="fa-solid fa-envelope"></i> dnz.jfr@gmail.com</a>
+              <a class="channel" href="https://www.linkedin.com/in/denizjafari/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> /in/denizjafari</a>
+              <a class="channel" href="https://scholar.google.com/citations?user=HRAaa7AAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Scholar profile</a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formsubmit.co/dnz.jfr@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Hello from denizjafari.github.io">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+            <label>
+              Your name
+              <input type="text" name="name" required placeholder="who's transmitting?">
+            </label>
+            <label>
+              Reply-to
+              <input type="email" name="email" required placeholder="you@somewhere.cool">
+            </label>
+            <label>
+              Message
+              <textarea name="message" required placeholder="research collaboration / rehab tech / project / coffee — anything goes."></textarea>
+            </label>
+            <button type="submit" class="button primary"><i class="fa-solid fa-paper-plane"></i> Transmit</button>
+          </form>
         </div>
       </div>
     </section>
@@ -187,8 +433,55 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <span>&copy; 2026 Deniz Jafari</span>
-      <span>Human + machine + motion.</span>
+      <span>Human + machine + motion. Built quietly, on purpose.</span>
     </div>
   </footer>
+
+  <script>
+    // Reveal-on-scroll
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Subtle pointer parallax on research cards (mouse-follow glow)
+    document.querySelectorAll('.research-card').forEach(card => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const mx = ((e.clientX - r.left) / r.width) * 100;
+        const my = ((e.clientY - r.top) / r.height) * 100;
+        card.style.setProperty('--mx', mx + '%');
+        card.style.setProperty('--my', my + '%');
+      });
+    });
+
+    // Tilt arc reactor with cursor (very subtle — within 6deg)
+    const arc = document.querySelector('.arc-reactor');
+    if (arc && window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('pointermove', (e) => {
+        const cx = window.innerWidth / 2;
+        const cy = window.innerHeight / 2;
+        const dx = (e.clientX - cx) / cx;
+        const dy = (e.clientY - cy) / cy;
+        arc.style.transform = `perspective(900px) rotateY(${dx * 6}deg) rotateX(${-dy * 6}deg)`;
+      });
+    }
+
+    // Telemetry: a tiny clock in the hero badge that updates every second
+    const tele = document.querySelector('.hero__telemetry span:last-child');
+    if (tele) {
+      const tick = () => {
+        const d = new Date();
+        const t = d.toLocaleTimeString([], { hour12: false });
+        tele.textContent = `OPERATOR ONLINE — TORONTO 43.66°N · 79.39°W · ${t}`;
+      };
+      tick(); setInterval(tick, 1000);
+    }
+  </script>
 </body>
 </html>
