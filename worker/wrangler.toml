@@ -1,0 +1,43 @@
+# Cloudflare Worker — chatbot for denizjafari.com / .github.io
+#
+# Deploy:
+#   1) Install Wrangler:           npm i -g wrangler
+#   2) Login to Cloudflare:        wrangler login
+#   3) Create a KV namespace:      wrangler kv:namespace create CHAT_KV
+#      then paste the returned id into the [[kv_namespaces]] block below.
+#   4) (Optional) Set the FormSubmit URL secret for lead capture:
+#        echo "https://formsubmit.co/<your-formsubmit-token>" | wrangler secret put FORMSUBMIT_URL
+#   5) Deploy:                     wrangler deploy
+#
+# After deploy, copy the workers.dev URL into media/site/site.js (CHAT_API_URL)
+# and into the Content-Security-Policy connect-src on every page.
+
+name = "deniz-chat"
+main = "src/worker.js"
+compatibility_date = "2025-09-23"
+
+# Workers AI binding — gives the Worker access to Llama 3.1 8B + BGE embeddings.
+[ai]
+binding = "AI"
+
+# Static asset binding — bundles ./corpus.json as a fetchable asset
+# (avoids inlining 276 KB into worker source).
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# KV for cached embeddings + lightweight rate limiting.
+# Run: wrangler kv:namespace create CHAT_KV
+#      wrangler kv:namespace create CHAT_KV --preview
+# then fill in the IDs.
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "988ccf84dba947e1a599556226522c63"
+preview_id = "134458a490e747488d2099ccb85f06e0"
+
+# Allowed origins for CORS — add a custom domain here when you point one at the worker.
+[vars]
+ALLOWED_ORIGINS = "https://denizjafari.com,https://www.denizjafari.com,https://denizjafari.github.io,http://localhost:8765,http://127.0.0.1:8765"
+RATE_LIMIT_PER_MIN = "10"
+MAX_INPUT_CHARS = "1500"
+MAX_HISTORY_TURNS = "8"

@@ -23,6 +23,7 @@ exclude:
   - qr_with_logo.py
   - qr_with_logo.png
   - scripts
+  - worker
   - DenizJafariRaw.png
   - pics
   - stroke.png
