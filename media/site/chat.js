@@ -35,8 +35,8 @@
     if (!log.children.length) {
       addMessage(
         "assistant",
-        "Hi — ask me about Deniz's research, projects, papers, teaching, or consulting. " +
-        "I'll only answer professional questions. Try \"What was your MSc thesis about?\" or \"What are you building right now?\""
+        "Hi — ask me about Deniz's research, PhD work, master's projects, patents, papers, teaching, or consulting. " +
+        "I'll only answer professional questions. Try \"What are you building right now?\", \"Which master's project do you mean?\", or \"Tell me about the patents.\""
       );
     }
   }

@@ -1090,6 +1090,25 @@ body::after {
   text-transform: uppercase;
 }
 .site-footer__inner span:nth-child(2) { color: var(--ink-dim); text-transform: none; letter-spacing: 0.04em; }
+.site-disclaimer {
+  max-width: var(--max);
+  margin: 18px auto 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(42,212,255,0.18);
+  border-radius: 14px;
+  background: rgba(5,7,12,0.42);
+  color: var(--ink-dim);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+}
+.site-disclaimer strong {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.site-disclaimer a { color: var(--cyan); }
 
 /* ============== SCROLL REVEAL ============== */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
