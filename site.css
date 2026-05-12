@@ -236,15 +236,16 @@ body::after {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: saturate(70%) brightness(0.45) contrast(1.05);
+  filter: saturate(108%) brightness(0.68) contrast(1.14);
 }
 .hero__bg::after {
   content: "";
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(5,7,12,0.4) 0%, rgba(5,7,12,0.85) 60%, rgba(5,7,12,1) 100%),
-    radial-gradient(ellipse at 30% 30%, rgba(42,212,255,0.25), transparent 55%),
-    radial-gradient(ellipse at 80% 80%, rgba(255,181,71,0.18), transparent 55%);
+    radial-gradient(ellipse at 46% 54%, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.24) 18%, transparent 42%),
+    linear-gradient(180deg, rgba(5,7,12,0.18) 0%, rgba(5,7,12,0.52) 68%, rgba(5,7,12,0.88) 100%),
+    radial-gradient(ellipse at 30% 30%, rgba(42,212,255,0.20), transparent 58%),
+    radial-gradient(ellipse at 80% 80%, rgba(255,181,71,0.14), transparent 58%);
 }
 .hero__bg::before {
   content: "";
