@@ -902,19 +902,45 @@ body::after {
   position: relative;
   padding: 110px var(--gutter) 60px;
   isolation: isolate;
+  --page-hero-image: url("media/photos/DSCF9114_md.jpg");
+  --page-hero-position: center 42%;
 }
 .page-hero::before {
   content: "";
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(5,7,12,0.88) 0%, rgba(5,7,12,0.72) 48%, rgba(5,7,12,0.86) 100%),
-    linear-gradient(180deg, rgba(5,7,12,0.70) 0%, rgba(5,7,12,0.88) 100%),
+    linear-gradient(90deg, rgba(5,7,12,0.76) 0%, rgba(5,7,12,0.42) 48%, rgba(5,7,12,0.70) 100%),
+    linear-gradient(180deg, rgba(5,7,12,0.42) 0%, rgba(5,7,12,0.80) 100%),
     radial-gradient(ellipse at 20% 0%, rgba(42,212,255,0.18), transparent 60%),
     radial-gradient(ellipse at 100% 100%, rgba(255,181,71,0.10), transparent 60%),
-    url("media/photos/DSCF9114_md.jpg");
+    var(--page-hero-image);
   background-size: cover;
-  background-position: center 42%;
+  background-position: var(--page-hero-position);
   z-index: -1;
+}
+.hero-education {
+  --page-hero-image: url("media/photos/IMG_3452_md.jpg");
+  --page-hero-position: center 46%;
+}
+.hero-teaching {
+  --page-hero-image: url("media/photos/DSCF9809_md.jpg");
+  --page-hero-position: center 40%;
+}
+.hero-academia {
+  --page-hero-image: url("media/photos/DSCF8422_md.jpg");
+  --page-hero-position: center 48%;
+}
+.hero-study {
+  --page-hero-image: url("media/photos/DSCF7755_md.jpg");
+  --page-hero-position: center 42%;
+}
+.hero-reads {
+  --page-hero-image: url("media/photos/photo-2846_singular_display_fullPicture_md.jpg");
+  --page-hero-position: center 52%;
+}
+.hero-contact {
+  --page-hero-image: url("media/photos/DSCF9114_md.jpg");
+  --page-hero-position: center 42%;
 }
 .page-hero__inner {
   max-width: var(--max);
@@ -1275,18 +1301,20 @@ body::after {
   position: relative;
   padding: 110px var(--gutter) 60px;
   isolation: isolate;
+  --page-hero-image: url("media/photos/DSCF7656_md.jpg");
+  --page-hero-position: center 42%;
 }
 .research-hero::before {
   content: "";
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(5,7,12,0.88) 0%, rgba(5,7,12,0.70) 48%, rgba(5,7,12,0.86) 100%),
-    linear-gradient(180deg, rgba(5,7,12,0.68) 0%, rgba(5,7,12,0.88) 100%),
+    linear-gradient(90deg, rgba(5,7,12,0.76) 0%, rgba(5,7,12,0.42) 48%, rgba(5,7,12,0.70) 100%),
+    linear-gradient(180deg, rgba(5,7,12,0.42) 0%, rgba(5,7,12,0.80) 100%),
     radial-gradient(ellipse at 80% 0%, rgba(42,212,255,0.18), transparent 60%),
     radial-gradient(ellipse at 0% 100%, rgba(255,181,71,0.10), transparent 60%),
-    url("media/photos/DSCF9114_md.jpg");
+    var(--page-hero-image);
   background-size: cover;
-  background-position: center 42%;
+  background-position: var(--page-hero-position);
   z-index: -1;
 }
 .research-hero__inner {
