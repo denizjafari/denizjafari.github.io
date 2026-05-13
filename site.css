@@ -1301,7 +1301,7 @@ body::after {
   position: relative;
   padding: 110px var(--gutter) 60px;
   isolation: isolate;
-  --page-hero-image: url("media/photos/DSCF7656_md.jpg");
+  --page-hero-image: url("media/photos/IMG_2488_md.jpg");
   --page-hero-position: center 42%;
 }
 .research-hero::before {
